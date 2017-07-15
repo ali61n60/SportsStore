@@ -71,8 +71,6 @@ namespace SportsStore.Models.Repository
                                 Category = "Chess",
                                 Price = 1200
                             }
-
-
                 };
         }
     }
