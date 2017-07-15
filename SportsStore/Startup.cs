@@ -37,7 +37,7 @@ namespace SportsStore
         public void ConfigureContainer(Registry registry)
         {
             // Use StructureMap-specific APIs to register services in the registry.
-            registry.For<IProductRepository>().Use<FakeProductRepository>();
+            registry.For<IProductRepository>().Use<AdoProductRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
