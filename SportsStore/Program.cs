@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using StructureMap.AspNetCore;
 
 namespace SportsStore
 {
@@ -17,6 +18,7 @@ namespace SportsStore
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
+                .UseStructureMap()
                 .Build();
 
             host.Run();
