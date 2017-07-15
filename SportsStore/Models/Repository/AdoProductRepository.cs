@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using SportsStore.Models;
 
-namespace Repository
+
+namespace SportsStore.Models.Repository
 {
     public class AdoProductRepository:IProductRepository
     {

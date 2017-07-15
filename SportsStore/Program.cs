@@ -18,7 +18,6 @@ namespace SportsStore
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
-                .UseStructureMap()
                 .Build();
 
             host.Run();

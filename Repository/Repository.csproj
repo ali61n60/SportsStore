@@ -4,8 +4,4 @@
     <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SportsStore\SportsStore.csproj" />
-  </ItemGroup>
-
 </Project>
