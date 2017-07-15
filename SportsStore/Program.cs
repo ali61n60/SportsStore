@@ -17,6 +17,7 @@ namespace SportsStore
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
+                .UseStructureMap()
                 .UseApplicationInsights()
                 .Build();
 

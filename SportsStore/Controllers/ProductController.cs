@@ -13,17 +13,18 @@ namespace SportsStore.Controllers
 {
     public class ProductController : Controller
     {
-        private IProductRepository repository;
+        private IProductRepository _repository;
         //Bootstrapper.container.GetInstance<ICategoryRepository>()
-        public ProductController()
+        public ProductController(IProductRepository repository)
         {
-            repository = Bootstrapper.container.GetInstance<IProductRepository>();
+            _repository = repository;
+            //_repository = Bootstrapper.container.GetInstance<IProductRepository>();
         }
         // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
         }
-        public ViewResult List() => View(repository.GetProducts());
+        public ViewResult List() => View(_repository.GetProducts());
     }
 }

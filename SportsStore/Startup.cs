@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using SportsStore.Models;
+using SportsStore.Models.Repository;
+using StructureMap;
 
 
 namespace SportsStore
@@ -29,6 +31,12 @@ namespace SportsStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+        }
+
+        public void ConfigureContainer(Registry registry)
+        {
+            // Use StructureMap-specific APIs to register services in the registry.
+            registry.For<IProductRepository>().Use<FakeProductRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -11,9 +11,9 @@ namespace SportsStore.Models.Repository
         {
             return new List<Product>
             {
-                new Product {Name = "Football", Price = 25},
-                new Product {Name = "Surf board", Price = 179},
-                new Product {Name = "Running shoes", Price = 95}
+                new Product {Name = "Fake Football", Price = 25},
+                new Product {Name = "Fake Surf board", Price = 179},
+                new Product {Name = "Fake Running shoes", Price = 95}
             };
         }
     }
