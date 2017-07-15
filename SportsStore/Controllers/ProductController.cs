@@ -14,7 +14,7 @@ namespace SportsStore.Controllers
     public class ProductController : Controller
     {
         private IProductRepository _repository;
-        //Bootstrapper.container.GetInstance<ICategoryRepository>()
+        
         public ProductController(IProductRepository repository)
         {
             _repository = repository;
