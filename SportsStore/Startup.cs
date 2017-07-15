@@ -17,6 +17,7 @@ namespace SportsStore
 {
     public class Startup
     {
+        //Learn Entity Framework https://docs.microsoft.com/en-us/ef/
         IConfigurationRoot Configuration;
 
         public Startup(IHostingEnvironment env)
