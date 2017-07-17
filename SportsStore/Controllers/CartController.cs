@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using SportsStore.Infrastructure;
 using SportsStore.Models;
 using SportsStore.Models.Repository;
+using SportsStore.Models.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -31,6 +32,16 @@ namespace SportsStore.Controllers
             }
             return RedirectToAction("Index", new { returnUrl });
         }
+
+        public ViewResult Index(string returnUrl)
+        {
+            return View(new CartIndexViewModel
+            {
+                Cart = GetCart(),
+                ReturnUrl = returnUrl
+            });
+        }
+
         public RedirectToActionResult RemoveFromCart(int productId,
             string returnUrl)
         {
@@ -54,9 +65,6 @@ namespace SportsStore.Controllers
             HttpContext.Session.SetJson("Cart", cart);
         }
 
-        public IActionResult Index(string returnurl)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

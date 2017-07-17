@@ -32,8 +32,8 @@ namespace SportsStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-           // services.AddMemoryCache();
-           // services.AddSession();
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
         public void ConfigureContainer(Registry registry)
@@ -45,13 +45,10 @@ namespace SportsStore
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-           // app.UseSession();
+            app.UseSession();
             app.UseMvc(routes => {
                 routes.MapRoute(
                     name: null,
