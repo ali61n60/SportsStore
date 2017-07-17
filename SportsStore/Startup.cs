@@ -32,6 +32,8 @@ namespace SportsStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+           // services.AddMemoryCache();
+           // services.AddSession();
         }
 
         public void ConfigureContainer(Registry registry)
@@ -49,6 +51,7 @@ namespace SportsStore
             }
             app.UseStatusCodePages();
             app.UseStaticFiles();
+           // app.UseSession();
             app.UseMvc(routes => {
                 routes.MapRoute(
                     name: null,
